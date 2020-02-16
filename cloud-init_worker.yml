@@ -2,7 +2,7 @@
 rancher:
   network:
     interfaces:
-      eth1:
+      ens192:
         address: 10.0.101.89/24
         gateway: 10.0.101.254
         mtu: 1500
