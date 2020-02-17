@@ -2,8 +2,11 @@
 rancher:
   network:
     interfaces:
-      eeth0:
+      eth*:
         address: 10.0.101.88/24
         gateway: 10.0.101.254
         mtu: 1500
         dhcp: false
+  post_cmds:
+  - ifconfig eth0 10.10.101.88 mask 255.255.255.0
+  - route add default gw 10.0.101.254
